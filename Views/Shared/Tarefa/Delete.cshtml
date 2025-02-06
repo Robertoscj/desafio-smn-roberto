@@ -1,0 +1,17 @@
+@model dotnet_app_roberto.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Excluir Tarefa";
+}
+
+<h2>Excluir Tarefa</h2>
+<p>Tem certeza que deseja excluir esta tarefa?</p>
+<div>
+    <h4>@Model.Mensagem</h4>
+    <p><strong>Data Limite:</strong> @Model.DataLimite.ToShortDateString()</p>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Confirmar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

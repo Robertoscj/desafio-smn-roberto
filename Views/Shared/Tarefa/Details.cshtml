@@ -1,0 +1,13 @@
+@model dotnet_app_roberto.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Detalhes da Tarefa";
+}
+
+<h2>Detalhes da Tarefa</h2>
+<div>
+    <h4>@Model.Mensagem</h4>
+    <p><strong>Data Limite:</strong> @Model.DataLimite.ToShortDateString()</p>
+    <p><strong>Status:</strong> @(Model.Concluida ? "Concluída" : "Pendente")</p>
+</div>
+<a asp-action="Index" class="btn btn-secondary">Voltar</a>

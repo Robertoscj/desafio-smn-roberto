@@ -1,0 +1,19 @@
+@model dotnet_app_roberto.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Criar Nova Tarefa";
+}
+
+<h2>Criar Nova Tarefa</h2>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Mensagem"></label>
+        <input asp-for="Mensagem" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="DataLimite"></label>
+        <input asp-for="DataLimite" type="date" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
